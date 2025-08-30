@@ -1,0 +1,20 @@
+{
+  "name": "@electroaudiogram/tailwind-config",
+  "version": "0.0.0",
+  "description": "",
+  "keywords": [],
+  "main": "./index.css",
+  "exports": {
+    ".": "./index.css"
+  },
+  "files": [
+    "*.css"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "tailwindcss": "^4.1.12"
+  }
+}

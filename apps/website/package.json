@@ -1,0 +1,28 @@
+{
+  "name": "website",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "echo 'start website'",
+    "dev": "dotenv -e ../../.env -- bash -c 'astro dev --port=\"$WEBSITE_PORT\"'",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check-types": "tsc --noEmit",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/react": "^4.3.0",
+    "@electroaudiogram/api": "workspace:*",
+    "@electroaudiogram/ui": "workspace:*",
+    "@types/react": "^19.1.12",
+    "@types/react-dom": "^19.1.8",
+    "astro": "^5.13.4",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "devDependencies": {
+    "@electroaudiogram/tailwind-config": "workspace:*",
+    "@tailwindcss/vite": "4.1.12",
+    "tailwindcss": "^4.1.12"
+  }
+}

@@ -1,0 +1,4 @@
+@import 'tailwindcss';
+@import '@electroaudiogram/tailwind-config';
+
+@source '../node_modules/@electroaudiogram/ui';

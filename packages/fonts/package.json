@@ -1,0 +1,41 @@
+{
+  "name": "@electroaudiogram/fonts",
+  "version": "1.0.0",
+  "description": "Electro Audiogram webfonts package",
+  "type": "module",
+  "types": "index.d.ts",
+  "main": "index.ts",
+  "exports": {
+    "./nudica.css": "./nudica.css",
+    "./nudica-bold-webfont.ttf": "./nudica-bold-webfont.ttf",
+    "./nudica-bold-webfont.woff2": "./nudica-bold-webfont.woff2",
+    "./nudica-bolditalic-webfont.ttf": "./nudica-bolditalic-webfont.ttf",
+    "./nudica-bolditalic-webfont.woff2": "./nudica-bolditalic-webfont.woff2",
+    "./nudica-light-webfont.ttf": "./nudica-light-webfont.ttf",
+    "./nudica-light-webfont.woff2": "./nudica-light-webfont.woff2",
+    "./nudica-lightitalic-webfont.ttf": "./nudica-lightitalic-webfont.ttf",
+    "./nudica-lightitalic-webfont.woff2": "./nudica-lightitalic-webfont.woff2",
+    "./nudica-medium-webfont.ttf": "./nudica-medium-webfont.ttf",
+    "./nudica-medium-webfont.woff2": "./nudica-medium-webfont.woff2",
+    "./nudica-mediumitalic-webfont.ttf": "./nudica-mediumitalic-webfont.ttf",
+    "./nudica-mediumitalic-webfont.woff2": "./nudica-mediumitalic-webfont.woff2",
+    "./nudica-regular-webfont.ttf": "./nudica-regular-webfont.ttf",
+    "./nudica-regular-webfont.woff2": "./nudica-regular-webfont.woff2",
+    "./nudica-regularitalic-webfont.ttf": "./nudica-regularitalic-webfont.ttf",
+    "./nudica-regularitalic-webfont.woff2": "./nudica-regularitalic-webfont.woff2",
+    "./nudica-thin-webfont.ttf": "./nudica-thin-webfont.ttf",
+    "./nudica-thin-webfont.woff2": "./nudica-thin-webfont.woff2",
+    "./nudica-thinitalic-webfont.ttf": "./nudica-thinitalic-webfont.ttf",
+    "./nudica-thinitalic-webfont.woff2": "./nudica-thinitalic-webfont.woff2",
+    "./nudica-ultralight-webfont.ttf": "./nudica-ultralight-webfont.ttf",
+    "./nudica-ultralight-webfont.woff2": "./nudica-ultralight-webfont.woff2",
+    "./nudica-ultralightitalic-webfont.ttf": "./nudica-ultralightitalic-webfont.ttf",
+    "./nudica-ultralightitalic-webfont.woff2": "./nudica-ultralightitalic-webfont.woff2"
+  },
+  "files": [
+    "*.woff2",
+    "*.ttf",
+    "*.css",
+    "index.*"
+  ]
+}

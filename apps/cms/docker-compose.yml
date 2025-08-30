@@ -1,0 +1,16 @@
+services:
+  api-db:
+    container_name: electroaudiogram-db
+    restart: always
+    image: postgres:latest
+    volumes:
+      - electroaudiogram-db-data:/var/lib/postgresql/data
+    ports:
+      - '${CMS_DATABASE_PORT}:5432'
+    environment:
+      - POSTGRES_DB=${CMS_DATABASE_NAME}
+      - POSTGRES_PASSWORD=${CMS_DATABASE_PASSWORD}
+      - POSTGRES_USER=${CMS_DATABASE_USER}
+
+volumes:
+  electroaudiogram-db-data:

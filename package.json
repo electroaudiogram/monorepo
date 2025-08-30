@@ -1,0 +1,53 @@
+{
+  "name": "electroaudiogram",
+  "version": "0.0.0",
+  "description": "",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.15.0",
+  "scripts": {
+    "preinstall": "npx -y only-allow pnpm",
+    "turbo": "turbo",
+    "start": "turbo run start",
+    "preview": "turbo run preview",
+    "build": "turbo run check-types build",
+    "dev": "turbo run dev",
+    "test": "turbo run test -- --watch",
+    "check-types": "turbo run check-types",
+    "format": "prettier . --write",
+    "lint": "eslint --fix"
+  },
+  "devDependencies": {
+    "@eslint/compat": "^1.2.9",
+    "@eslint/js": "^9.28.0",
+    "@types/node": "^24.3.0",
+    "@typescript-eslint/eslint-plugin": "^8.33.1",
+    "@typescript-eslint/parser": "^8.33.1",
+    "cross-env": "^10.0.0",
+    "dotenv-cli": "^10.0.0",
+    "eslint": "^9.28.0",
+    "eslint-plugin-astro": "^1.3.1",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-prettier": "^5.4.1",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-storybook": "^9.0.16",
+    "globals": "^16.2.0",
+    "jiti": "^2.4.2",
+    "prettier": "^3.5.3",
+    "prettier-plugin-astro": "^0.14.1",
+    "prettier-plugin-tailwindcss": "^0.6.12",
+    "turbo": "^2.5.4",
+    "typescript-eslint": "^8.33.1"
+  },
+  "pnpm": {
+    "overrides": {
+      "rollup": "npm:@rollup/wasm-node"
+    },
+    "onlyBuiltDependencies": [
+      "sharp",
+      "esbuild",
+      "unrs-resolver"
+    ]
+  }
+}

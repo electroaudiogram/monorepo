@@ -1,0 +1,107 @@
+/* Nudica Thin */
+@font-face {
+  font-family: 'Nudica';
+  src: url('./nudica-thin-webfont.woff2') format('woff2');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nudica';
+  src: url('./nudica-thinitalic-webfont.woff2') format('woff2');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Nudica UltraLight */
+@font-face {
+  font-family: 'Nudica';
+  src: url('./nudica-ultralight-webfont.woff2') format('woff2');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nudica';
+  src: url('./nudica-ultralightitalic-webfont.woff2') format('woff2');
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Nudica Light */
+@font-face {
+  font-family: 'Nudica';
+  src: url('./nudica-light-webfont.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nudica';
+  src: url('./nudica-lightitalic-webfont.woff2') format('woff2');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Nudica Regular */
+@font-face {
+  font-family: 'Nudica';
+  src: url('./nudica-regular-webfont.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nudica';
+  src: url('./nudica-regularitalic-webfont.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Nudica Medium */
+@font-face {
+  font-family: 'Nudica';
+  src: url('./nudica-medium-webfont.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nudica';
+  src: url('./nudica-mediumitalic-webfont.woff2') format('woff2');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Nudica Bold */
+@font-face {
+  font-family: 'Nudica';
+  src: url('./nudica-bold-webfont.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nudica';
+  src: url('./nudica-bolditalic-webfont.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  --font-n:
+    Nudica, ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
