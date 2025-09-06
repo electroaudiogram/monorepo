@@ -10,6 +10,7 @@ import sharp from 'sharp'
 
 import { Media } from './collections/Media'
 import { Users } from './collections/Users'
+import { migrations } from './migrations'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -43,6 +44,7 @@ export default buildConfig({
     outputFile: path.resolve(dirname, '../../../packages/api/api.d.ts'),
   },
   db: postgresAdapter({
+    prodMigrations: migrations,
     pool: {
       connectionString: `postgres://${process.env.CMS_DATABASE_USER}:${process.env.CMS_DATABASE_PASSWORD}@${process.env.CMS_DATABASE_HOST}:${process.env.CMS_DATABASE_PORT}/${process.env.CMS_DATABASE_NAME}`,
     },
