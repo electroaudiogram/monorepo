@@ -71,7 +71,7 @@ jobs:
             org.opencontainers.image.version=staging
             org.opencontainers.image.source=${{ github.repositoryUrl }}
 
-      - name: 🏗️ Build & Push Website Docker image
+      - name: 🏗️ Build & Push CMS Docker image
         uses: docker/build-push-action@v5
         with:
           target: cms-distroless
