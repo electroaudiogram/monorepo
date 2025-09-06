@@ -49,7 +49,7 @@ jobs:
       - name: 🏗️ Build & Push Website Docker image
         uses: docker/build-push-action@v5
         with:
-          target: website
+          target: website-distroless
           context: .
           file: ./Dockerfile
           push: true
