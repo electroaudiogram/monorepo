@@ -13,8 +13,7 @@
     "payload": "payload",
     "predev": "docker compose --file ../../docker-compose.yml up -d && payload seed",
     "preview": "dotenv -e ../../.env -- bash -c 'PORT=\"$CMS_PORT\" next start",
-    "start": "node .next/standalone/apps/cms/server.js",
-    "test": "vitest run --config ./vitest.config.mts"
+    "start": "node .next/standalone/apps/cms/server.js"
   },
   "dependencies": {
     "@electroaudiogram/load-env": "workspace:*",
