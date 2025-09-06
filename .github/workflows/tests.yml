@@ -17,6 +17,12 @@ jobs:
       - name: ⬇️ Checkout code
         uses: actions/checkout@v4
 
+      - name: 🔧 Create .env file
+        run: |
+          echo "🔧 Creating .env for API"
+          cat <<'EOF' > ./.env
+          CMS_SECRET="MY_SECRET_KEY"
+          EOF
       - name: 🤓 Read .nvmrc
         id: nvm
         run: echo "NODE_VERSION=$(cat .nvmrc)" >> $GITHUB_OUTPUT
