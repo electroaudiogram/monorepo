@@ -33,9 +33,9 @@
     "./nudica-ultralightitalic-webfont.woff2": "./nudica-ultralightitalic-webfont.woff2"
   },
   "files": [
-    "*.woff2",
-    "*.ttf",
     "*.css",
+    "*.ttf",
+    "*.woff2",
     "index.*"
   ]
 }

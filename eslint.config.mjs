@@ -1,6 +1,7 @@
 import { includeIgnoreFile } from '@eslint/compat'
 import js from '@eslint/js'
 import astro from 'eslint-plugin-astro'
+import perfectionist from 'eslint-plugin-perfectionist'
 import prettier from 'eslint-plugin-prettier'
 import reactHooks from 'eslint-plugin-react-hooks'
 import storybook from 'eslint-plugin-storybook'
@@ -56,6 +57,16 @@ const config = defineConfig([
     rules: {
       // disable warnings, since prettier should format on save
       'prettier/prettier': 'off',
+    },
+  },
+
+  // Perfectionist
+  {
+    plugins: {
+      perfectionist,
+    },
+    rules: {
+      'perfectionist/sort-imports': 'error',
     },
   },
 

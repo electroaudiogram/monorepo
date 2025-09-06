@@ -5,16 +5,16 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "start": "node .next/standalone/apps/cms/server.js",
     "build": "dotenv -e ../../.env -- next build",
-    "predev": "docker compose --env-file ../../.env up -d && payload seed",
+    "check-types": "tsc --noEmit",
     "dev": "dotenv -e ../../.env -- bash -c 'PORT=\"$CMS_PORT\" next dev'",
     "generate:importmap": "payload generate:importmap",
     "generate:types": "payload generate:types",
     "payload": "payload",
+    "predev": "docker compose --file ../../docker-compose.yml up -d && payload seed",
     "preview": "dotenv -e ../../.env -- bash -c 'PORT=\"$CMS_PORT\" next start",
-    "test": "vitest run --config ./vitest.config.mts",
-    "check-types": "tsc --noEmit"
+    "start": "node .next/standalone/apps/cms/server.js",
+    "test": "vitest run --config ./vitest.config.mts"
   },
   "dependencies": {
     "@electroaudiogram/load-env": "workspace:*",

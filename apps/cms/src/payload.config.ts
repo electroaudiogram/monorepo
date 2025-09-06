@@ -40,7 +40,7 @@ export default buildConfig({
   editor: lexicalEditor(),
   secret: process.env.CMS_SECRET || '',
   typescript: {
-    outputFile: path.resolve(dirname, '../../../packages/api/api-types.d.ts'),
+    outputFile: path.resolve(dirname, '../../../packages/api/api.d.ts'),
   },
   db: postgresAdapter({
     pool: {

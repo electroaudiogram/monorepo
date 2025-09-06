@@ -1,5 +1,6 @@
-import { withPayload } from '@payloadcms/next/withPayload'
 import type { NextConfig } from 'next'
+
+import { withPayload } from '@payloadcms/next/withPayload'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 

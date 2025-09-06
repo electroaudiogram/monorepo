@@ -1,32 +1,25 @@
 ---
-import '../style.css'
-
-import { test } from '@electroaudiogram/api'
 import { Test } from '@electroaudiogram/ui'
 
-console.log(test().email)
+import Body from '../components/Body.astro'
+import Document from '../components/Document.astro'
+import Head, { type Props as Metadata } from '../components/Head.astro'
+import Html from '../components/Html.astro'
+
+export interface Props {
+  metadata: Metadata
+}
+
+const { metadata } = Astro.props
 ---
 
-<!doctype html>
-<html lang='en'>
-  <head>
-    <meta charset='UTF-8' />
-    <meta name='viewport' content='width=device-width' />
-    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
-    <meta name='generator' content={Astro.generator} />
-    <title>Astro Basics</title>
-  </head>
-  <body>
-    <Test />
-    <slot />
-  </body>
-</html>
-
-<style>
-  html,
-  body {
-    margin: 0;
-    width: 100%;
-    height: 100%;
-  }
-</style>
+<Document>
+  <Html>
+    <Head {...metadata} />
+    <Body>
+      <a class='sr-only' href='#main-content'> Skip to main content </a>
+      <Test />
+      <slot />
+    </Body>
+  </Html>
+</Document>

@@ -1,5 +1,5 @@
 services:
-  api-db:
+  electroaudiogram-db:
     container_name: electroaudiogram-db
     restart: always
     image: postgres:latest

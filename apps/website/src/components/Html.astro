@@ -1,0 +1,10 @@
+---
+const isPwa = Astro.url.searchParams.get('utm_source') === 'pwa'
+---
+
+<html
+  lang='en'
+  class:list={[isPwa ? 'pwa' : 'nopwa']}
+  class='nowebgl battery network antialiased'>
+  <slot />
+</html>

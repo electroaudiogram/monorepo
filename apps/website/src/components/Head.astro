@@ -1,0 +1,79 @@
+---
+import { Head as Capo } from 'astro-capo'
+import { Font } from 'astro:assets'
+import { ClientRouter } from 'astro:transitions'
+
+export interface Props {
+  title?: string
+  description?: string
+  url?: string
+  image?: string
+  type?: string
+  twitterHandle?: string
+  jsonLd?: Record<string, unknown>
+}
+
+const {
+  title,
+  description,
+  image = 'https://mysite.com/myopengraphimage.png',
+  type = 'website',
+  twitterHandle = '@votreTwitter',
+  jsonLd,
+} = Astro.props
+
+// const isProd = import.meta.env.PROD
+const canonicalUrl = process.env.WEBSITE_URL!
+const jsonLdToString = JSON.stringify(jsonLd, null, 2)
+---
+
+<Capo>
+  <meta charset='utf-8' />
+  <meta
+    name='viewport'
+    content='width=device-width, initial-scale=1, viewport-fit=cover'
+  />
+  <title>{title}</title>
+  <meta name='description' content={description} />
+  <link rel='canonical' href={canonicalUrl} />
+  <Font cssVariable='--font-n' />
+  <ClientRouter />
+  <link rel='icon' type='image/svg+xml' href='/icons/favicon.svg' />
+  <link rel='sitemap' href='/sitemap.xml' />
+  <link
+    rel='apple-touch-icon'
+    sizes='180x180'
+    href='/icons/apple-touch-icon.png'
+  />
+  <meta name='theme-color' content='#03b065' />
+  <meta name='mobile-web-app-capable' content='yes' />
+  <meta name='apple-mobile-web-app-title' content={title} />
+  <meta
+    name='apple-mobile-web-app-status-bar-style'
+    content='black-translucent'
+  />
+  <link
+    rel='manifest'
+    href={`/manifest.webmanifest`}
+    crossorigin='use-credentials'
+  />
+  <meta property='og:title' content={title} />
+  <meta property='og:description' content={description} />
+  <meta property='og:type' content={type} />
+  <meta property='og:url' content={canonicalUrl} />
+  <meta property='og:image' content={image} />
+  <meta name='twitter:card' content='summary_large_image' />
+  <meta name='twitter:title' content={title} />
+  <meta name='twitter:description' content={description} />
+  <meta name='twitter:image' content={image} />
+  <meta name='twitter:site' content={twitterHandle} />
+  {
+    jsonLdToString && (
+      <script
+        type='application/ld+json'
+        is:inline
+        set:html={JSON.stringify(jsonLd)}
+      />
+    )
+  }
+</Capo>

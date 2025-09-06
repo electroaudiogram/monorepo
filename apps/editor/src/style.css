@@ -1,0 +1,43 @@
+body,
+html {
+  margin: 0;
+  height: 100%;
+  background: #282c34;
+}
+
+main {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  flex-grow: 1;
+  max-height: 100%;
+  position: relative;
+  overflow: auto;
+}
+
+#editor {
+  overflow: auto;
+}
+
+.cm-editor {
+  height: 100%;
+}
+
+#roll {
+  height: 300px;
+}
+
+:root {
+  --background: red !important;
+  --lineBackground: #22222299 !important;
+  --foreground: #fff !important;
+  --caret: #ffcc00 !important;
+  --selection: rgba(128, 203, 196, 0.5) !important;
+  --selectionMatch: #036dd626 !important;
+  --lineHighlight: #00000050 !important;
+  --gutterBackground: transparent !important;
+  --gutterForeground: #8a919966 !important;
+}

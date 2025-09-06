@@ -13,6 +13,7 @@
     "noUncheckedIndexedAccess": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
+    "verbatimModuleSyntax": true,
     "strict": true
   }
 }

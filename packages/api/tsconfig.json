@@ -2,8 +2,8 @@
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
     "outDir": "dist",
-    "types": ["vitest/globals", "./api-types.d.ts"]
+    "types": ["vitest/globals"]
   },
-  "include": ["src"],
+  "include": ["src", "api.d.ts"],
   "exclude": ["node_modules", "dist"]
 }

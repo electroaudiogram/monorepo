@@ -34,8 +34,8 @@ out/
 storybook-static
 !.storybook
 
-# Playwright
-node_modules/
+# Test
+coverage/
 /test-results/
 /playwright-report/
 /blob-report/
