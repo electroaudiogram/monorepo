@@ -31,6 +31,7 @@
     "qs-esm": "^7.0.2"
   },
   "devDependencies": {
+    "@electroaudiogram/typescript-config": "workspace:*",
     "payload": "^3.54.0",
     "tsup": "^8.5.0",
     "typescript": "^5.9.2",

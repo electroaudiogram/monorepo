@@ -1,0 +1,17 @@
+{
+  "name": "@electroaudiogram/typescript-config",
+  "version": "0.0.0",
+  "description": "",
+  "keywords": [],
+  "exports": {
+    "./tsconfig.base.json": "./tsconfig.base.json",
+    "./tsconfig.react.json": "./tsconfig.react.json"
+  },
+  "files": [
+    "*.json"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT"
+}

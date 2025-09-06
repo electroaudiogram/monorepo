@@ -1,0 +1,48 @@
+name: Tests
+
+on:
+  push:
+    branches:
+      - main
+      - 'feature/**'
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: ⬇️ Checkout code
+        uses: actions/checkout@v4
+
+      - name: 🤓 Read .nvmrc
+        id: nvm
+        run: echo "NODE_VERSION=$(cat .nvmrc)" >> $GITHUB_OUTPUT
+
+      - name: 📦 Install PNPM
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10.15.0
+
+      - name: 🟢 Setup Node.js ${{ steps.nvm.outputs.NODE_VERSION }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ steps.nvm.outputs.NODE_VERSION }}
+          cache: 'pnpm'
+
+      - name: 📥 Install dependencies
+        run: pnpm install
+
+      - name: 💅 Lint
+        run: pnpm lint
+
+      - name: 🧼 Format
+        run: pnpm format
+
+      - name: 🧪 Unit tests
+        run: pnpm test
+
+      - name: 🏗️ Build
+        run: pnpm build
