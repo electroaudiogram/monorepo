@@ -15,7 +15,7 @@
     "preinstall": "npx -y only-allow pnpm",
     "preview": "turbo run preview",
     "start": "turbo run start",
-    "test": "turbo run test -- --watch",
+    "test": "turbo run test",
     "turbo": "turbo"
   },
   "devDependencies": {
