@@ -35,6 +35,7 @@ jobs:
           username: ${{ secrets.PRIVATE_REGISTRY_USERNAME }}
           password: ${{ secrets.PRIVATE_REGISTRY_PASSWORD }}
 
+      # WEBSITE
       - name: 📦 Metadata for Website Docker image
         id: meta_website
         uses: docker/metadata-action@v5
@@ -50,6 +51,30 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           target: website-distroless
+          context: .
+          file: ./Dockerfile
+          push: true
+          tags: ${{ steps.meta_website.outputs.tags }}
+          labels: ${{ steps.meta_website.outputs.labels }}
+          build-args: |
+            NODE_VERSION=${{ steps.nvm.outputs.NODE_VERSION }}
+
+      # CMS
+      - name: 📦 Metadata for CMS Docker image
+        id: meta_cms
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ secrets.PRIVATE_REGISTRY_URL }}/${{ github.repository_owner }}/${{ github.event.repository.name }}-cms-staging
+          tags: |
+            type=raw,value=latest
+          labels: |
+            org.opencontainers.image.version=staging
+            org.opencontainers.image.source=${{ github.repositoryUrl }}
+
+      - name: 🏗️ Build & Push Website Docker image
+        uses: docker/build-push-action@v5
+        with:
+          target: cms-distroless
           context: .
           file: ./Dockerfile
           push: true
