@@ -78,7 +78,7 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ steps.meta_website.outputs.tags }}
-          labels: ${{ steps.meta_website.outputs.labels }}
+          tags: ${{ steps.meta_cms.outputs.tags }}
+          labels: ${{ steps.meta_cms.outputs.labels }}
           build-args: |
             NODE_VERSION=${{ steps.nvm.outputs.NODE_VERSION }}
