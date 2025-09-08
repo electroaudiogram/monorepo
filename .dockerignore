@@ -1,6 +1,7 @@
 Dockerfile
 .dockerignore
 node_modules
+.ssh
 .git
 .gitignore
 *.md
@@ -13,3 +14,4 @@ storybook-static
 coverage
 .DS_Store
 .env
+.npmrc
