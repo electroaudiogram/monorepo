@@ -1,4 +1,4 @@
-# 🎶 ElectroAudiogram Monorepo
+# Monorepo Electro Audiogram
 
 Bienvenue dans le monorepo du **Festival ElectroAudiogram** – un festival interdisciplinaire de **musiques électroniques**, **arts visuels** et **cultures numériques** organisé à **Caen (France)**.
 
